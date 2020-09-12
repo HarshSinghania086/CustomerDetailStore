@@ -36,9 +36,8 @@ public class CustomerDetailController {
 	}
 	
 	@RequestMapping(method = RequestMethod.PUT, value = "/customer/{cusName}/{mobNo}")
-	public @ResponseBody String updateCustomerDetails(@RequestBody CustomerDetailData data) {
+	public void updateCustomerDetails(@RequestBody CustomerDetailData data) {
 		detailService.updateCustomer(data);
-		return "Updated";
 	}
 	
 	@RequestMapping("/index")
